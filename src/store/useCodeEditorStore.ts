@@ -33,7 +33,7 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
     output: "",
     isRunning: false,
     error: null,
-    editor: null,
+    editor: null as MonacoEditor.IStandaloneCodeEditor | null,
     executionResult: null,
 
     getCode: () => get().editor?.getValue() || "",
